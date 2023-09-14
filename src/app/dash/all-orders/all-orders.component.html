@@ -1,0 +1,93 @@
+<div class="mt-2">
+    <h1 class="d-flex  justfify-content-center align-items-center">All Orders</h1>
+    <mat-tab-group animationDuration="2000ms">
+        <mat-tab label="Accepted">
+            <div class="card">
+                <table class="table table-striped table-inverse table-responsive">
+                    <thead>
+                        <tr class="table-dark">
+                            <th cope="col" class="th-sm ">#</th>
+                            <th cope="col" class="th-sm ">Driver Name</th>
+                            
+                            <th cope="col" class="th-sm ">Driver Phone</th>
+                            <th cope="col" class="th-sm ">Vehicle Details</th>
+                            
+                            <th cope="col" class="th-sm ">Rider Name</th>
+                            <th cope="col" class="th-sm ">Rider Phone</th>
+                            <th cope="col" class="th-sm ">Rider Location</th>
+                            <th cope="col" class="th-sm ">Destination</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let r of accept | paginate:{
+                            itemsPerPage:size,
+                            
+                            currentPage:page,
+                            totalItems:length}; let i = index">
+                            <td scope="row">{{i+1}}</td>
+                            <td>{{r. driverName}}</td>
+                            <td>{{r. driverPhone}}</td>
+                            
+                            <td>{{r. car_details}}</td>
+                            <td>{{r.userName}}</td>
+                            <td>{{r.userPhone}}</td>
+                            <td>{{r.originAddress}}</td>
+                            <td>{{r.destinationAddress}}</td>
+    
+    
+                        </tr>
+                    </tbody>
+    
+                </table>
+                <pagination-controls previousLabel="prev" nextLabel="next" (pageChange)="onAccepted($event)">
+
+                </pagination-controls>
+            </div>
+        </mat-tab>
+        <mat-tab label="Rejected">
+            <div class="card">
+                <table class="table table-striped table-inverse table-responsive">
+                    <thead>
+                        <tr class="table-dark">
+                            <th cope="col" class="th-sm ">#</th>
+                            <th cope="col" class="th-sm ">Driver Name</th>
+                            
+                            <th cope="col" class="th-sm ">Driver Phone</th>
+                            <th cope="col" class="th-sm ">Vehicle Details</th>
+                            
+                            <th cope="col" class="th-sm ">Rider Name</th>
+                            <th cope="col" class="th-sm ">Rider Phone</th>
+                            <th cope="col" class="th-sm ">Rider Location</th>
+                            <th cope="col" class="th-sm ">Destination</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let r of reject | paginate:{
+                            itemsPerPage:size,
+                            
+                            currentPage:page,
+                            totalItems:length}; let i = index">
+                            <td scope="row">{{i+1}}</td>
+                            <td>{{r. driverName}}</td>
+                            <td>{{r. driverPhone}}</td>
+                            
+                            <td>{{r. car_details}}</td>
+                            <td>{{r.userName}}</td>
+                            <td>{{r.userPhone}}</td>
+                            <td>{{r.originAddress}}</td>
+                            <td>{{r.destinationAddress}}</td>
+    
+    
+                        </tr>
+                    </tbody>
+    
+                </table>
+                <pagination-controls previousLabel="prev" nextLabel="next" (pageChange)="onRejected($event)">
+
+                </pagination-controls>
+            </div>    
+        </mat-tab>
+        
+      </mat-tab-group>
+      
+</div>

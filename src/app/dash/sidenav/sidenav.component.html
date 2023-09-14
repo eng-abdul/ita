@@ -1,0 +1,63 @@
+<mat-list role="list">
+    <mat-nav-list class="text-lg">
+        <li class="nav-item">
+            
+            <a mat-list-item class="nav-link active" routerLink="home">
+                <i class="bi bi-speedometer2"></i>
+                Dashboard</a>
+        </li>
+        <li class="nav-item">
+
+            <a mat-list-item class="nav-link active" data-bs-target="#driver-nav" data-bs-toggle="collapse" href="">
+                <i class="bi bi-menu-button-wide"></i>
+                <!-- <i class="bi bi-person-standing"></i> -->
+                <span>Manage Driver</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="driver-nav" class="nav-content collapse navbar-nav" data-bs-parent="#sidebar-nav">
+                <li class="nav-item">
+                    <a mat-list-item class="nav-link" routerLink="driver">
+                        <i class="bi bi-people"></i>
+                        <span>View Driver</span>
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item class="nav-link" routerLink="addriver">
+                        <i class="bi bi-person"></i>
+                        <span>Add Driver</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a mat-list-item class="nav-link active" data-bs-target="#rider-nav" data-bs-toggle="collapse" href="">
+                <i class="bi bi-menu-button-wide"></i><span>Manage Rider</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="rider-nav" class="nav-content collapse navbar-nav" data-bs-parent="#sidebar-nav">
+                <li class="nav-item">
+                    <a mat-list-item class="nav-link" routerLink="rider">
+                        <i class="bi bi-people"></i>
+                        <span>View Rider</span>
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item class="nav-link" routerLink="addrider">
+                        <i class="bi bi-person"></i>
+                        <span>Add Rider</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+           
+            <a mat-list-item class="nav-link active" routerLink="orders">
+                <!-- <i class="bi bi-chat-left-text"></i> -->
+                <i class="bi bi-bicycle"></i>
+                
+               Bookings</a>
+        </li>
+    </mat-nav-list>
+
+    
+</mat-list>

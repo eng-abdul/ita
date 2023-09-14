@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firstfirebaseproject-25906": {
+      "hosting": {
+        "ita": [
+          "firstfirebaseproject-25906"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firstfirebaseproject-25906"
+  }
+}

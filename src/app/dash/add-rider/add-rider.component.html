@@ -1,0 +1,47 @@
+<div class="mt-2">
+    <div class="card w-75">
+        <div class="card-header bg-dark text-light">
+            <h1 class="justify-content-center align-items-center">Add New Rider</h1>
+        </div>
+        <div class="card-body">
+        
+            <form action="" method="post" [formGroup]="riderForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                        <mat-form-field appearance="outline" class="d-flex">
+                            <mat-label>
+                                Name
+                            </mat-label>
+                            <input type="text" matInput formControlName="name">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="d-flex">
+                            <mat-label>
+                                Phone
+                            </mat-label>
+                            <input type="text" matInput formControlName="phone">
+                        </mat-form-field>
+                       
+                 
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline" class="d-flex">
+                            <mat-label>
+                                Email
+                            </mat-label>
+                            <input type="text" matInput formControlName="email">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="d-flex">
+                            <mat-label>
+                                Password
+                            </mat-label>
+                            <input type="password" matInput formControlName="password">
+                        </mat-form-field>
+                        <button mat-raised-button color="primary">Save</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

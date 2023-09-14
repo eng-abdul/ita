@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center align-items-center">
+<img src="../assets/logo/logo_ita-removebg-preview.png" class="img-fluid" alt="">
+</div>
+<!-- <div class="container d-flex align-items-center justfy-content-center min-vh-100 col-lg-6 ml-auto"> -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-75">
+        
+    <div class="card w-50">
+        <mat-toolbar color="primary" class="align-items-center">
+            <h1>Admin Login</h1>
+        </mat-toolbar>
+        <div class="card-body">
+            <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+                <mat-form-field appearance="outline" class="d-flex">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput formControlName="email" required="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="d-flex">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" required="password">
+                </mat-form-field>
+                <button mat-raised-button color="primary">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
